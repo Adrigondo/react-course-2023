@@ -8,7 +8,7 @@ https://github.com/Adrigondo/react-course-2023/tree/main/project
 
 ### Guía de instalación de bootstrap y tabler
 En la carpeta de tu proyecto, ejecuta:
-`npm install bootstrap`, y posteriormente `npm install tabler`.
+`npm install bootstrap`, posteriormente `npm install tabler` y por último `npm install @tabler/icons-webfont`.
 
 Luego, en el archivo `index.html` debes agregar las siguientes lineas:
 
@@ -20,10 +20,11 @@ Luego, en el archivo `index.html` debes agregar las siguientes lineas:
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Estas 2 lineas -->
+    <!-- Estas 3 lineas -->
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="/node_modules/@tabler/core/dist/css/tabler.min.css">
-    <!-- ...... -->
+    <link rel="stylesheet" href="/node_modules/@tabler/icons-webfont/tabler-icons.css">
+    <!-- Hasta aquí -->
 
     <title>Vite + React + TS</title>
   </head>
@@ -35,7 +36,7 @@ Luego, en el archivo `index.html` debes agregar las siguientes lineas:
     <!-- Estas 2 lineas -->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/node_modules/@tabler/core/dist/js/tabler.min.js"></script>
-    <!-- ...... -->
+    <!-- Hasta aquí -->
 
   </body>
 </html>
