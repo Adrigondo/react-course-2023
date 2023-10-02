@@ -1,4 +1,7 @@
-const Navbar = () => {
+const Navbar = (
+  { search, onSearch }:
+    { search: string, onSearch: any }
+) => {
   return (
     <div>
       <div className="input-icon">
@@ -6,6 +9,8 @@ const Navbar = () => {
           type="text"
           placeholder="Buscar..."
           className="form-control"
+          value={search}
+          onChange={(event) => onSearch(event)}
         />
         <div className="input-icon-addon">
           <span className="ti ti-search"></span>
