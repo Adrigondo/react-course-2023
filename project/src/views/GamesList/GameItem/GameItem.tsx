@@ -1,4 +1,4 @@
-const GameItem = ({ game }: any) => {
+const GameItem = ({ game }: { game: any }) => {
     return (
         <div>
             {game.name}
