@@ -42,3 +42,6 @@ Luego, en el archivo `index.html` debes agregar las siguientes lineas:
 ```
 
 Con ello ya debería estar funcionando los estilos. En caso contrario, solicitame ayuda c:
+
+## Clase 4.
+Descargar [este archivo](https://github.com/Adrigondo/react-course-2023/tree/main/project/src/data), que servirá para probar nuestra aplicación.
