@@ -4,7 +4,8 @@ import { useState } from 'react';
 
 class VideogamesParams{
   'page':number=1;
-  'size_page':number=10;
+  'page_size':number=10;
+  'search':string="";
 }
 const useVideogamesData = () => {
   const [games, setGames] = useState<any>([]);
@@ -24,13 +25,16 @@ const useVideogamesData = () => {
       if(stringParams!=''){
         stringParams='&'+stringParams;
       }
+      
       const res = await fetch(`https://api.rawg.io/api/games?key=e5190f36da374820b8ec07396096d1c8${stringParams}`);
+
       const data = await res.json();
       setGames(data.results);
       
       setIsLoading(false);
       setError(false);
     } catch (error) {
+      console.error("ASDASDASDSA")
       console.error(error);
       setIsLoading(false);
       setError(error);
