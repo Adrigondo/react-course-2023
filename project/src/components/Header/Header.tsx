@@ -1,12 +1,17 @@
 import Navbar from "./Navbar/Navbar";
 
-const Header = ({ children }: { children: JSX.Element }) => {
+const Header = (
+  { children, search, onSearch }:
+    { children: JSX.Element, search: string, onSearch: any }
+) => {
   return (
     <div className="d-flex justify-content-between">
       <div>
         {children}
       </div>
-      <Navbar />
+      <Navbar
+        search={search}
+        onSearch={onSearch} />
     </div>
   );
 }
