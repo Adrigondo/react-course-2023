@@ -5,23 +5,24 @@ import useVideogamesData from "src/hooks/useVideogamesData";
 
 const Home = () => {
     const [search, setSearch] = useState('');
-    const {games, fetchVideogames} = useVideogamesData();
-    console.log(games);
+    const {games, fetchVideogames}=useVideogamesData();
 
-    useEffect(() => {
-        fetchVideogames('&page_size=30&page=1');
-    }, [])
-    
-    const handleChange = (event: any) => {
+    useEffect(()=>{
+        fetchVideogames({page: 1, page_size:20, search: search});
+        console.log("A");
+        
+    }, [setSearch]);
+
+    const handleSearch = (event: any) => {
         setSearch(event.target.value)
         console.log(search);
-        fetchVideogames(`&search=${search}`);
+        // fetchVideogames({page: 1, page_size:20, search: search});
     }
     return (
         <div>
             <Header
                 search={search}
-                onSearch={handleChange}
+                onSearch={handleSearch}
             >
                 <h1 className=''>
                     Home

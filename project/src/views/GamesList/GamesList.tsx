@@ -1,9 +1,10 @@
-import useVideogamesData from "src/hooks/useVideogamesData";
 import GameItem from "./GameItem/GameItem";
-// import videogames from "src/data/videogames.json";
 
 const GamesList = ({ search, games }: { search: string, games:Array<any> }) => {
-    // const filteredGames = games.filter((game:any) => {
+    // const games = videogames;
+    // console.log(games);
+
+    // const filteredGames = games.results.filter((game) => {
     //     if (game.name.toLowerCase().includes(search.toLowerCase())) {
     //         return true;
     //     } else {
@@ -14,7 +15,7 @@ const GamesList = ({ search, games }: { search: string, games:Array<any> }) => {
         return <GameItem game={game} key={`GamesList-item-${game.id}`}></GameItem>
     })
     return (
-        <div>
+        <div className="row">
             {gameItems}
         </div>
     );
